@@ -1,5 +1,29 @@
-<include a CircleCI status badge, here>
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/hungntong/project-ml-microservice/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/hungntong/project-ml-microservice/tree/main)
+## Summary
+In this project we containerized a simple machine learning app that make prediction of housing market using Docker. 
+We further enhanced it by adding logging, and then create a cluster and deploy the app through Kubernetes.
+Lastly, we added autochecking using github and CircleCI.
+
+## How to Run Python Scripts
+To run the app.py. You'll need to set up a virtual environment, install the required tools, and then run app.py. 
+
+python3 -m virtualenv ~/.devops
+source .devops/bin/activate
+make install
+python3 app.py
+
+## Explanation of Files
+.circleci/config.yml - Contains circleCI build instructions
+app.py - Python code to build the web app
+Dockerfile - contains instructions to build a docker image
+make_prediction.sh - calls /predict with the specified information
+Makefile - contains instructions on how to set up the environment and lint tested
+README.md - project's documentation
+requirements.txt - contains tools that are required to run the app
+run_docker.sh - script to build and run the docker image
+run_kubernetes.sh - script to create the cluster and deploy docker image
+uploads_docker.sh - upload Docker image to Docker Hub
+
 ## Project Overview
 
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
