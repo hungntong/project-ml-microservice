@@ -7,22 +7,22 @@ Lastly, we added autochecking using github and CircleCI.
 ## How to Run Python Scripts
 To run the app.py. You'll need to set up a virtual environment, install the required tools, and then run app.py. 
 
-python3 -m virtualenv ~/.devops
-source .devops/bin/activate
-make install
-python3 app.py
+1. python3 -m virtualenv ~/.devops
+2. source .devops/bin/activate
+3. make install
+4. python3 app.py
 
 ## Explanation of Files
-.circleci/config.yml - Contains circleCI build instructions
-app.py - Python code to build the web app
-Dockerfile - contains instructions to build a docker image
-make_prediction.sh - calls /predict with the specified information
-Makefile - contains instructions on how to set up the environment and lint tested
-README.md - project's documentation
-requirements.txt - contains tools that are required to run the app
-run_docker.sh - script to build and run the docker image
-run_kubernetes.sh - script to create the cluster and deploy docker image
-uploads_docker.sh - upload Docker image to Docker Hub
+* .circleci/config.yml - Contains circleCI build instructions
+* app.py - Python code to build the web app
+* Dockerfile - contains instructions to build a docker image
+* make_prediction.sh - calls /predict with the specified information
+* Makefile - contains instructions on how to set up the environment and lint tested
+* README.md - project's documentation
+* requirements.txt - contains tools that are required to run the app
+* run_docker.sh - script to build and run the docker image
+* run_kubernetes.sh - script to create the cluster and deploy docker image
+* uploads_docker.sh - upload Docker image to Docker Hub
 
 ## Project Overview
 
