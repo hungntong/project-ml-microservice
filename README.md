@@ -11,6 +11,25 @@ To run the app.py. You'll need to set up a virtual environment, install the requ
 2. source .devops/bin/activate
 3. make install
 4. python3 app.py
+5. ./make_prediction
+
+To run in docker locally:
+1. Make sure docker is install. Follow the link for installation instructions https://docs.docker.com/engine/install.
+2. docker --version
+3. docker build --tag=<name> .
+3. docker image ls
+4. docker run -p 8000:80 <name>
+5. ./make_prediction.sh
+
+To run container in Kubernetes locally:
+1. curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+2. sudo install minikube-linux-amd64 /usr/local/bin/minikube
+3. minikube start
+4. kubectl config view
+5. kubectl get pods
+6. kubectl run <name> --image=<path> --port=80
+7. kubectl port-forward <name> 8000:80
+8. ./make_prediction.sh
 
 ## Explanation of Files
 * .circleci/config.yml - Contains circleCI build instructions
